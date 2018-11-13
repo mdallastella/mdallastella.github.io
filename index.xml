@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marco Dalla Stella</title>
+    <link>https://marco.dallastella.name/</link>
+    <description>Recent content on Marco Dalla Stella</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Aug 2018 09:52:02 +0200</lastBuildDate>
+    
+	<atom:link href="https://marco.dallastella.name/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
