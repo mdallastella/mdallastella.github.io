@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/marcodallastella
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://marco.dallastella.name
+  * I am marcodallastella (https://keybase.io/marcodallastella) on keybase.
+  * I have a public key ASD51I7zAE2uQqIQGx8yUnDdYEcS3RcQw17enXVy-Hgq3wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f89cd89ce9a2c8ef8ed050019c430a5e3c63a34230b97c5b28124ceba7c81eee0a",
+      "host": "keybase.io",
+      "kid": "0120f9d48ef3004dae42a2101b1f325270dd604712dd1710c35ede9d7572f8782adf0a",
+      "uid": "bc88b298b6009638255a3916c2d09219",
+      "username": "marcodallastella"
+    },
+    "merkle_root": {
+      "ctime": 1555971858,
+      "hash": "842959f27d2a15cf6cc2baadd4a67d58567ef7a0573d7056d570261f320ea3c8a8d0c9fff504d3971fbd85fddd5e1bf05fb92062c57e78f8348f0abc28b28133",
+      "hash_meta": "37efcb277f3097db834c3631da36529c14e209f9c27c650c6bb2ac224d48d82c",
+      "seqno": 5221034
+    },
+    "service": {
+      "entropy": "6pPK8i2MsxtMjHiikW9gr0PR",
+      "hostname": "marco.dallastella.name",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555971869,
+  "expire_in": 504576000,
+  "prev": "d1ea171771c116bc26c883c712df53f690a321b0ac6b1d79edb69b1ec70f1c91",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg+dSO8wBNrkKiEBsfMlJw3WBHEt0XEMNe3p11cvh4Kt8Kp3BheWxvYWTESpcCFMQg0eoXF3HBFrwmyIPHEt9T9pCjIbCsax157babHscPHJHEIHH/OPgqcWJsx9DhGYR6TC9NN0Oc68rVRMq/vHTiu8zDAgHCo3NpZ8RA9eAWj8kmwAb8mjNSfnNqmdUaDUBauLQJwym2ZKsX+ABqQcrQ/LHfUm2KluIhs9zlYpLlrBEC1essMaM3u8nJCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMimTK83x9oX1p+6SgjPwuRK/1hhEf4+ne8q6knbTxIro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/marcodallastella
+
+==================================================================
