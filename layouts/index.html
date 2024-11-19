@@ -1,11 +1,10 @@
 {{ define "main" }}
-<article class="container mx-auto max-w-screen-lg grid grid-cols-1 md:grid-cols-2 overflow-hidden mt-8">
-  <div class="w-full justify-center">
-    <img src="/img/me.svg" alt="svg self portrait" />
+<section class="grid grid-cols-1 mx-4 md:grid-cols-2 overflow-hidden mt-8 md:min-h-full">
+  <div class="flex items-stretch place-content-center ">
+    <img src="/img/me2.svg" alt="Marco self portrait"/>
   </div>
-
   <div class="items-center justify-center content-center prose dark:prose-invert">
     {{ .Content }}
   </div>
-</article>
+</section>
 {{ end }}

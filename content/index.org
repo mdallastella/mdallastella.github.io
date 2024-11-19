@@ -1,19 +1,9 @@
-#+TITLE: MDS
+My name is Marco, and I’m a code alchemist and a thinker. Currently, I’m the CTO and co-founder of 7bridges s.r.l.
 
-My name is Marco and I’m a code alchemist, and a
-thinker. Currently, I’m the CTO and co-founder of small company, 7bridges
-s.r.l..
+Alchemist, because I see computer science as the art of transmutation - not of metals, but of raw data into noble insights. This pursuit blends science, philosophy, magic, and a bit of faith. It’s a complex matter.
 
-Alchemist, ‘cause I think computer science is about transmutation: instead of
-noble metals, we try to obtain noble data. This involves science, philosophy,
-magic and a bit of faith. It’s a complex matter.
+Thinker, because I believe the "world is full of fascinating problems waiting to be solved". I choose to tackle them with my intellect and some wizardry called programming languages.
 
-Thinker, ‘cause I choose to follow the statement “The world is full of
-fascinating problems waiting to be solved.”. I choose to solve those problems
-with my intellect and some wizardry called programming languages.
+I cast my spells with Clojure, a language built for clarity and power - ideal for an alchemist's work. But it’s just a means to an end: my purpose is to leave the world a little more beautiful, and Lisp dialects are the best wands I’ve found.
 
-I cast my spells with Clojure, but it’s just a means to an end: my final purpose
-is leaving the world a little more beautiful, and Lisp dialects are the best
-wands around.
-
-I don’t have time to waste in hatred.
+I focus my energy on creation, leaving no time for hatred.

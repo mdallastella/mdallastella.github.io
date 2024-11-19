@@ -10,3 +10,19 @@
     font-display: swap;
     src: url(/fonts/Iosevka-Term-SS04.woff2) format('woff2');
 }
+
+@layer components {
+    body {
+        @apply flex flex-col h-screen bg-gray-700 text-gray-300
+    }
+
+    /* .hero { */
+    /*     @apply container mx-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden mt-8 md:min-h-full */
+    /* } */
+}
+
+/* @layer utilities { */
+/*     .main-content { */
+/*         @apply items-center justify-center content-center prose dark:prose-invert */
+/*     } */
+/* } */

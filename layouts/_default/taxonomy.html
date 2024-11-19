@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="min-h-full">
+  {{ .Content }}
+  {{ range .Pages }}
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ end }}
+</section>
+{{ end }}

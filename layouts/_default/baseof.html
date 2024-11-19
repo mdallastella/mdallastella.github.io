@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}'>
   {{ partial "head.html" . }}
-  <body class="bg-slate-900 text-slate-200">
+  <body>
     {{- partial "header.html" . -}}
     <main class="container mx-auto">
       {{- block "main" . }}{{- end }}
