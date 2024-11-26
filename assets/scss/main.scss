@@ -1,0 +1,42 @@
+@use "pico" with (
+  $theme-color: "zinc",
+  $css-var-prefix: "--m-",
+  $enable-semantic-container: true,
+  $enable-classes: true,
+  $modules: (
+    "content/code": false,
+    "forms/input-color": false,
+    "forms/input-date": false,
+    "forms/input-file": false,
+    "forms/input-range": false,
+    "forms/input-search": false,
+    "components/accordion": false,
+    "components/card": false,
+    "components/dropdown": false,
+    "components/loading": false,
+    "components/modal": false,
+    "components/nav": true,
+    "components/progress": false,
+    "components/tooltip": false,
+    "utilities/accessibility": true,
+    "utilities/reduce-motion": false
+  )
+);
+
+/* Font */
+@font-face {
+    font-family: 'Iosevka Term SS04';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Iosevka-Term-SS04.woff2) format('woff2');
+}
+
+:root { --m-font-family: 'Iosevka Term SS04', monospace; }
+.portrait { width: 100%; }
+.about {align-content: center;}
+
+footer > div {
+    align-self: center;
+    justify-self: center;
+}
