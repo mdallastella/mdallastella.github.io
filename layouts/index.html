@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section class="grid grid-cols-1 mx-4 md:grid-cols-2 overflow-hidden mt-8 md:min-h-full">
-  <div class="flex items-stretch place-content-center ">
-    <img src="/img/me2.svg" alt="Marco self portrait"/>
+<section class="grid">
+  <div>
+    <img class="portrait" src="/img/me2.svg" alt="Marco self portrait"/>
   </div>
-  <div class="items-center justify-center content-center prose dark:prose-invert">
+  <div class="about">
     {{ .Content }}
   </div>
 </section>

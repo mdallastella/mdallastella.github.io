@@ -1,7 +1,9 @@
-{{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
-{{- if hugo.IsServer }}
-{{ $styles = $styles | resources.ExecuteAsTemplate (printf "css/styles.dev.%v.css" now.UnixMilli) .}}
-{{ else }}
-{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
-{{ end -}}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ $opts := dict
+   "transpiler" "dartsass"
+   "targetPath" "css/style.css"
+   "enableSourceMap" (not hugo.IsProduction)
+   "includePaths" (slice "node_modules/@picocss/pico/scss")
+}}
+{{ with resources.Get "scss/main.scss" | toCSS $opts | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
