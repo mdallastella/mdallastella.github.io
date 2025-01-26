@@ -1,3 +1,5 @@
+#+TITLE: Home
+
 My name is Marco, and I’m a code alchemist and a thinker. Currently, I’m the CTO
 and co-founder of [[https://7bridges.eu][7bridges]] and admin of [[https://functional.cafe][Functional Cafè]].
 

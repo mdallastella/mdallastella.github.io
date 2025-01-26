@@ -1,12 +1,18 @@
 <!-- Header -->
-<header class="container">
-  <nav>
-    <ul>
-      <li><strong>MDS</strong></li>
-    </ul>
-    <ul>
-      <li><a href="#" class="hover:underline">Blog</a></li>
-      <li><a href="#" class="hover:underline">Other</a></li>
-    </ul>
-  </nav>
+<header>
+<nav role="navigation" data-position="end" data-breakpoint="lg">
+  <ul>
+    <li><a href="/">MDS</a></li>
+  </ul>
+  <input type="checkbox" id="menu-btn2">
+  <label for="menu-btn2" style="font-size: calc(var(--pico-font-size) * 1.3);" aria-label="Menu"
+    aria-controls="nav-example2">
+    &equiv;
+  </label>
+  <ol id="nav-example2" role="list">
+    {{ range .Site.Menus.main }}
+    <li role="listitem"><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+  </ol>
+</nav>
 </header>

@@ -1,0 +1,39 @@
+baseURL: "https://marco.dallastella.name/"
+languageCode: "en-us"
+title: "MDS - Personal website"
+enableRobotsTXT: true
+
+params:
+  description: "A simple personal website with a blog."
+  author: "Marco Dalla Stella"
+  social:
+    - name: "Mastodon"
+      URL: "https://twitter.com/yourusername"
+    - name: "Github"
+      URL: "https://github.com/yourusername"
+    - name: "LinkedIn"
+      URL: "https://www.linkedin.com/in/yourusername"
+
+menu:
+  main:
+    - identifier: "home"
+      name: "Home"
+      url: "/"
+      weight: 1
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 2
+    - identifier: "contacts"
+      name: "Contacts"
+      url: "/contacts/"
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+build:
+  buildStats:
+    enable: true

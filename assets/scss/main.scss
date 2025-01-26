@@ -32,9 +32,19 @@
     src: url(/fonts/Iosevka-Term-SS04.woff2) format('woff2');
 }
 
-:root { --m-font-family: 'Iosevka Term SS04', monospace; }
+:root {
+    --m-font-family: 'Iosevka Term SS04', monospace;
+    --m-background-color: #1d2235 !important;
+    --m-primary: #82b0ec !important;
+}
 .portrait { width: 100%; }
+
 .about {align-content: center;}
+
+.social {
+    display: flex;
+    gap: 1rem;
+}
 
 footer > div {
     align-self: center;

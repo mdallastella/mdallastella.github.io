@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@picocss/pico": "^2.0.6",
+    "@yohns/picocss": "^2.2.9",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0"
