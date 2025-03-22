@@ -1,5 +1,5 @@
 @use "pico" with (
-  $theme-color: "zinc",
+  $theme-color: "azure",
   $css-var-prefix: "--m-",
   $enable-semantic-container: true,
   $enable-classes: true,
@@ -25,28 +25,21 @@
 
 /* Font */
 @font-face {
-    font-family: 'Iosevka Term SS04';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/fonts/Iosevka-Term-SS04.woff2) format('woff2');
+  font-family: 'Iosevka';
+  font-display: swap;
+  font-weight: 300;
+  font-stretch: expanded;
+  src: url('/fonts/IosevkaFixedSS04-Light.woff2') format('woff2');
 }
 
 :root {
-    --m-font-family: 'Iosevka Term SS04', monospace;
+    --m-font-family: 'Iosevka', monospace;
     --m-background-color: #1d2235 !important;
     --m-primary: #82b0ec !important;
+    --m-font-weight: 300;
 }
-.portrait { width: 100%; }
 
-.about {align-content: center;}
-
-.social {
+footer {
     display: flex;
-    gap: 1rem;
-}
-
-footer > div {
-    align-self: center;
-    justify-self: center;
+    justify-content: center;
 }

@@ -1,15 +1,15 @@
 {{ define "main" }}
-<section class="grid">
-  <div>
+<section class="row">
+  <div class="col-12 col-md-6">
     {{ partialCached "portrait.html" . }}
   </div>
-  <div class="about">
+  <div class="col-12 col-md-6">
     {{ .Content }}
-    <div class="social">
+    <p>You can find me on:
       {{ range .Site.Params.social }}
-      <a href="{{ .URL }}">{{ .name }}</a>
+      <a href="{{ .URL }}" aria-label="{{ .name }} profile">{{ .name }}</a>
       {{ end }}
-    </div>
+    </p>
   </div>
 </section>
 {{ end }}
