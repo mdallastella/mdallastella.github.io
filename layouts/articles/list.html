@@ -2,10 +2,8 @@
 <ul>
   {{- range .Paginator.Pages -}}
   <li>
-    <hgroup>
     <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
     <small>{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }} ⋅ {{ .ReadingTime }}m</small>
-    </hgroup>
   </li>
   {{- end -}}
 </ul>

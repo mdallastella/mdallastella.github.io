@@ -34,9 +34,14 @@
 
 :root {
     --m-font-family: 'Iosevka', monospace;
+    --m-spacing: 0.5rem;
     --m-background-color: #1d2235 !important;
     --m-primary: #82b0ec !important;
     --m-font-weight: 300;
+}
+
+.avatar {
+    max-height: 50%;
 }
 
 footer {

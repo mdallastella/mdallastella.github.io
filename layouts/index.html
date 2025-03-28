@@ -1,9 +1,7 @@
 {{ define "main" }}
-<section class="row">
-  <div class="col-12 col-md-6">
+<section class="row-fluid">
+  <div class="col-12 col-md-4">
     {{ partialCached "portrait.html" . }}
-  </div>
-  <div class="col-12 col-md-6">
     {{ .Content }}
     <p>You can find me on:
       {{ range .Site.Params.social }}
@@ -11,5 +9,12 @@
       {{ end }}
     </p>
   </div>
+  <div class="col-12 offset-md-5 col-md-7">
+    <h2>Articles</h2>
+    <ul>
+      {{ range where site.RegularPages "Section" "articles" }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{ end }}
+    </ul>
 </section>
 {{ end }}

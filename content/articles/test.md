@@ -9,7 +9,7 @@ A brief description of what the function does, using simple present tense in the
 
 ## Signature
 
-```text
+```python
 func someFunction(s string, n int) string
 ```
 

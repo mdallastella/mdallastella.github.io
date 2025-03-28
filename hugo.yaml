@@ -22,20 +22,18 @@ menu:
       url: "/"
       weight: 1
     - identifier: "posts"
-      name: "Posts"
-      url: "/posts/"
-      weight: 2
+      name: "Articles"
+      url: "/articles/"
+      weight: 3
     - identifier: "about"
       name: "About me"
       url: "/about-me/"
-      weight: 3
+      weight: 2
 
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
   highlight:
     style: modus-vivendi
+    lineNos: true
 
 build:
   buildStats:
