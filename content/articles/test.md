@@ -22,3 +22,18 @@ One or more practical examples, each within a fenced code block.
 Additional information to clarify as needed.
 
 I :heart: Hugo
+
+## Code
+
+``` clojure
+;; Parse each draw, splitting by space the single elements and turn them into a map:
+(defn parse-draws
+  [set]
+  (reduce
+   (fn [acc el]
+     (let [[n color] (s/split el #"\s")
+           n (parse-long n)]
+       (assoc acc (keyword color) n)))
+   {}
+   set))
+```

@@ -1,50 +1,78 @@
 @use "pico" with (
-  $theme-color: "azure",
-  $css-var-prefix: "--m-",
-  $enable-semantic-container: true,
-  $enable-classes: true,
-  $modules: (
-    "content/code": false,
-    "forms/input-color": false,
-    "forms/input-date": false,
-    "forms/input-file": false,
-    "forms/input-range": false,
-    "forms/input-search": false,
-    "components/accordion": false,
-    "components/card": false,
-    "components/dropdown": false,
-    "components/loading": false,
-    "components/modal": false,
-    "components/nav": true,
-    "components/progress": false,
-    "components/tooltip": false,
-    "utilities/accessibility": true,
-    "utilities/reduce-motion": false
-  )
+    $theme-color: "cyan",
+    $css-var-prefix: "--m-",
+    $enable-semantic-container: true,
+    $enable-classes: true,
+    $modules: (
+        "content/code": false,
+        "forms/input-color": false,
+        "forms/input-date": false,
+        "forms/input-file": false,
+        "forms/input-range": false,
+        "forms/input-search": false,
+        "components/accordion": false,
+        "components/card": false,
+        "components/dropdown": false,
+        "components/loading": false,
+        "components/modal": false,
+        "components/nav": true,
+        "components/progress": false,
+        "components/tooltip": false,
+        "utilities/accessibility": true,
+        "utilities/reduce-motion": false
+    )
 );
 
 /* Font */
 @font-face {
-  font-family: 'Iosevka';
-  font-display: swap;
-  font-weight: 300;
-  font-stretch: expanded;
-  src: url('/fonts/IosevkaFixedSS04-Light.woff2') format('woff2');
+    font-family: 'Iosevka';
+    font-display: swap;
+    font-weight: 300;
+    font-stretch: expanded;
+    src: url('/fonts/IosevkaFixedSS04-Light.woff2') format('woff2');
 }
 
 :root {
     --m-font-family: 'Iosevka', monospace;
     --m-spacing: 0.5rem;
+    --m-color: #f5f5f5 !important;
     --m-background-color: #1d2235 !important;
-    --m-primary: #82b0ec !important;
+    --m-primary: #00c6c0 !important;
     --m-font-weight: 300;
+}
+
+#articles > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#articles ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#articles p {
+    font-size: 0.7rem;
 }
 
 .avatar {
     max-height: 50%;
 }
 
-footer {
+body {
+    height: 100vh;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
     display: flex;
     justify-content: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.7rem;
 }

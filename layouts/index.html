@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="row-fluid">
-  <div class="col-12 col-md-4">
+  <div class="col-12 offset-md-2 col-md-4">
     {{ partialCached "portrait.html" . }}
     {{ .Content }}
     <p>You can find me on:
@@ -9,11 +9,13 @@
       {{ end }}
     </p>
   </div>
-  <div class="col-12 offset-md-5 col-md-7">
-    <h2>Articles</h2>
+  <div id="articles" class="col-12 offset-md-7 col-md-4">
+    <hgroup>
+      <h3>Recent articles</h3>
+    </hgroup>
     <ul>
       {{ range where site.RegularPages "Section" "articles" }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      <li>{{ partial "article-link.html" . }}</li>
       {{ end }}
     </ul>
 </section>

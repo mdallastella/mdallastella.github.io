@@ -1,6 +1,6 @@
 baseURL: "https://marco.dallastella.name/"
 languageCode: "en-us"
-title: "mdallastella"
+title: "Marco Dalla Stella"
 enableRobotsTXT: true
 enableEmoji: true
 
@@ -31,10 +31,9 @@ menu:
       weight: 2
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     style: modus-vivendi
     lineNos: true
-
-build:
-  buildStats:
-    enable: true
