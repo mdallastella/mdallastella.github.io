@@ -1,15 +1,14 @@
 {{ define "main" }}
 <section class="row">
   <div id="articles" class="col-12 offset-md-2 col-md-8">
+    {{ range .Pages.GroupByDate "2006" }}
+    <h2>{{ .Key }}</h2>
     <ul>
-      {{- range .Paginator.Pages -}}
-      <li>
-        <hgroup>
-          {{ partial "article-link" . }}
-        </hgroup>
-      </li>
-      {{- end -}}
+      {{ range .Pages }}
+      <li>{{ partial "article-link" . }}</li>
+      {{ end }}
     </ul>
+    {{ end }}
   </div>
 </section>
 {{ end }}

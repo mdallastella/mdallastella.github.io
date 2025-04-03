@@ -1,5 +1,5 @@
 @use "pico" with (
-    $theme-color: "cyan",
+    $theme-color: "azure",
     $css-var-prefix: "--m-",
     $enable-semantic-container: true,
     $enable-classes: true,
@@ -35,9 +35,6 @@
 :root {
     --m-font-family: 'Iosevka', monospace;
     --m-spacing: 0.5rem;
-    --m-color: #f5f5f5 !important;
-    --m-background-color: #1d2235 !important;
-    --m-primary: #00c6c0 !important;
     --m-font-weight: 300;
 }
 

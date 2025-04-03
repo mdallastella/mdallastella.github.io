@@ -35,5 +35,5 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: modus-vivendi
+    style: github
     lineNos: true
