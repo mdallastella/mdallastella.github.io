@@ -40,5 +40,9 @@
   {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
   {{ end }}
 
+  {{ if .Params.plotly }}
+    <script src="https://cdn.plot.ly/plotly-3.0.1.js" charset="utf-8"></script>
+  {{ end }}
+
   {{ partialCached "css.html" . }}
 </head>

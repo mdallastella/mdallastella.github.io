@@ -1,5 +1,5 @@
 @use "pico" with (
-    $theme-color: "azure",
+    $theme-color: "slate",
     $css-var-prefix: "--m-",
     $enable-semantic-container: true,
     $enable-classes: true,
@@ -72,4 +72,8 @@ body > footer {
 
 footer p {
     font-size: 0.7rem;
+}
+
+#avatar {
+    color: #000;
 }
