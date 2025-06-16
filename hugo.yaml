@@ -4,9 +4,6 @@ title: "Marco Dalla Stella"
 enableRobotsTXT: true
 enableEmoji: true
 
-# Ignore Quarto files
-ignoreFiles = ["\\.qmd$"]
-
 params:
   description: "Marco, a code alchemist and thinker, transforms raw data into noble insights as the CTO and co-founder of 7bridges and admin of Functional Cafè. Blending science, philosophy, and programming wizardry, Marco solves fascinating problems with clarity and purpose, crafting beauty through Clojure and Lisp dialects."
   author: "Marco Dalla Stella"
@@ -38,5 +35,5 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: github-dark
+    style: github
     lineNos: true
