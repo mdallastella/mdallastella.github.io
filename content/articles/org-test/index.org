@@ -1,0 +1,81 @@
+#+Title:        Org mode test
+#+date:         [2021-05-07 Fri]
+#+lastmod:      [2023-09-09 Sat]
+#+PROPERTY: header-args    :results code
+#+categories[]: Productivity
+#+tags[]:       Emacs Hugo
+#+plotly:       true
+
+* This is a org-mode test for Hugo.
+
+** Some clojure code:
+#+begin_src clojure
+  (+ 1 2)
+#+end_src
+
+#+RESULTS:
+: 3
+
+*** Require a library
+#+begin_src clojure
+  (require '[clojure.string :as s])
+
+  (-> "Hello world!" s/reverse)
+#+end_src
+
+#+RESULTS:
+: !dlrow olleH
+
+*** Use tablecloth
+
+#+begin_src clojure :summary "Stuff"
+  (require '[tablecloth.api :as tc])
+
+  (def data
+    (-> "https://raw.githubusercontent.com/techascent/tech.ml.dataset/master/test/data/stocks.csv"
+        (tc/dataset {:key-fn keyword})
+        (tc/group-by (fn [row]
+                       {:symbol (:symbol row)
+                        :year   (tech.v3.datatype.datetime/long-temporal-field :years (:date row))}))
+        (tc/aggregate {:summary #(tech.v3.datatype.functional/mean (% :price))})
+        (tc/order-by [:symbol :year])))
+
+  (tc/head data 10)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+_unnamed [10 3]:
+
+| :symbol | :year |     :summary |
+|---------|------:|-------------:|
+|    AAPL |  2000 |  21.74833333 |
+|    AAPL |  2001 |  10.17583333 |
+|    AAPL |  2002 |   9.40833333 |
+|    AAPL |  2003 |   9.34750000 |
+|    AAPL |  2004 |  18.72333333 |
+|    AAPL |  2005 |  48.17166667 |
+|    AAPL |  2006 |  72.04333333 |
+|    AAPL |  2007 | 133.35333333 |
+|    AAPL |  2008 | 138.48083333 |
+|    AAPL |  2009 | 150.39333333 |
+
+#+end_example
+
+
+***  Plotting
+#+begin_src clojure
+  (require '[scicloj.tableplot.v1.plotly :as p])
+
+  (def j (-> data
+             (tc/select-rows #(-> % :symbol (= "AAPL")))
+             (p/base {:=x :year :=y :summary})
+             (p/layer-line)
+             (p/plot)
+             (clojure.data.json/json-str)))
+
+  (spit "./content/articles/org-test/test2.json" j)
+#+end_src
+
+
+{{< plotly json="./test2.json" width="100%">}}
