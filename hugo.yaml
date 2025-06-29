@@ -5,30 +5,33 @@ enableRobotsTXT: true
 enableEmoji: true
 
 params:
-  description: "Marco, a code alchemist and thinker, transforms raw data into noble insights as the CTO and co-founder of 7bridges and admin of Functional Cafè. Blending science, philosophy, and programming wizardry, Marco solves fascinating problems with clarity and purpose, crafting beauty through Clojure and Lisp dialects."
+  description: "Marco, a code alchemist and thinker, transforms raw data into noble insights as the CTO and co-founder of 7bridges and admin of Functional Cafè. Blending science, philosophy, and programming wizardry, Marco solves fascinating problems with clarity and purpose, crafting beauty through programming."
   author: "Marco Dalla Stella"
+  mastodon: "@mdallastella@functional.cafe"
   social:
-    - name: "Mastodon"
+    - name: "mastodon"
+      label: "Mastodon"
       URL: "https://functional.cafe/@mdallastella"
-    - name: "Github"
+    - name: "github"
+      label: "GitHub"
       URL: "https://github.com/mdallastella"
-    - name: "LinkedIn"
+    - name: "linkedin"
+      label: "LinkedIn"
       URL: "https://www.linkedin.com/in/marcodallastella"
+    - name: "rss"
+      label: "RSS article feed"
+      URL: "/index.xml"
 
 menu:
   main:
-    - identifier: "home"
-      name: "Home"
-      url: "/"
-      weight: 1
     - identifier: "posts"
       name: "Articles"
       url: "/articles/"
-      weight: 3
+      weight: 2
     - identifier: "about"
       name: "About me"
       url: "/about-me/"
-      weight: 2
+      weight: 3
 
 markup:
   goldmark:

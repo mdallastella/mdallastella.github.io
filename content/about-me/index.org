@@ -1,6 +1,4 @@
----
-title: About me
----
+#+TITLE: About me
 
 My name is Marco and I’m a code alchemist, thinker, and musician.
 
@@ -12,7 +10,7 @@ Thinker, ‘cause I choose to follow the statement “The world is full of
 fascinating problems waiting to be solved.”. I choose to solve those problems
 with my intellect and some wizardry called programming languages.
 
-I cast my spells with [Clojure](https://clojure.org), a language built for clarity and power - ideal
+I cast my spells with [[https://clojure.org][Clojure]], a language built for clarity and power - ideal
 for an alchemist's work. But it’s just a means to an end: my purpose is to leave
 the world a little more beautiful, and Lisp dialects are the best wands I’ve
 found.

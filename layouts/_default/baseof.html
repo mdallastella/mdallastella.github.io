@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}' data-theme="light">
-  {{ partial "head.html" . }}
+  <head>
+    {{ partial "head.html" . }}
+    {{block "extras" .}}{{ end }}
+  </head>
   <body>
     {{- partial "header.html" . -}}
     <main class="container-fluid" role="main">

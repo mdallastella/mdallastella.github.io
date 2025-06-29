@@ -54,8 +54,8 @@
     font-size: 0.7rem;
 }
 
-.avatar {
-    max-height: 50%;
+#article-link .title {
+    font-size: 1.5rem;
 }
 
 body {
@@ -71,9 +71,78 @@ body > footer {
 }
 
 footer p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 #avatar {
     color: black;
+}
+
+#profile {
+    display: grid;
+    grid-template-areas:
+        "content"
+        "portrait"
+        "social";
+    justify-content: left;
+}
+
+/* Assign each child to a grid area */
+#portrait {
+    grid-area: portrait;
+}
+
+.portrait {
+    height: 200px;
+}
+
+#social {
+    grid-area: social;
+    display: flex;
+    gap: 10px;
+}
+
+#content {
+    grid-area: content;
+}
+
+/* On wider screens (e.g., desktop), restore natural order */
+@media (min-width: 768px) {
+    #profile {
+        grid-template-areas:
+            "portrait"
+            "content"
+            "social";
+    }
+
+    .portrait {
+        height: 400px;
+    }
+}
+
+// Icons
+.social {
+    width: 32px;
+    height: 32px;
+}
+
+.mastodon {
+    background-image: url(/img/social/mastodon.svg);
+    background-size: contain;
+}
+
+.github {
+    background-image: url(/img/social/github.svg);
+    background-size: contain;
+    // color: $theme-color;
+}
+
+.linkedin {
+    background-image: url(/img/social/linkedin.svg);
+    background-size: contain;
+}
+
+.rss {
+    background-image: url(/img/social/rss.svg);
+    background-size: contain;
 }

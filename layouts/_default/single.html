@@ -1,24 +1,49 @@
 {{ define "main" }}
 <section class="row">
-  <div class="col-12 offset-md-2 col-md-8">
-    <hgroup>
-      <h1>{{ .Title }}</h1>
-      {{ with .Date }}
-      {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := . | time.Format ":date_long" }}
-      <p><small><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time></small></p>
-      {{end}}
-      {{ with .GetTerms "tags" }}
-      <p><small>{{ (index . 0).Parent.LinkTitle }}:
-        {{ range . }}
-        <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
-        {{ end }}
-      </small></p>
-      {{ end }}
-    </hgroup>
-    <article>
+  <div class="flex col-12 offset-md-2 col-md-8">
+
+    <!-- Header split in two columns -->
+    <header class="row col-12 align-center">
+
+      <!-- Title (Left column) -->
+      <div class="col-12 col-md-6">
+        <hgroup>
+          <h1>{{ .Title }}</h1>
+        </hgroup>
+      </div>
+
+      <!-- Meta info (Right column) -->
+      <div class="col-12 col-md-6">
+        <hgroup>
+          {{ with .Date }}
+          {{ $dateMachine := . | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := . | time.Format ":date_long" }}
+          <p><small class="text-muted">
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+          </small></p>
+          {{ end }}
+
+          {{ with .GetTerms "tags" }}
+          <p><small>
+            {{ (index . 0).Parent.LinkTitle }}:
+            {{ range . }}
+            <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+            {{ end }}
+          </small></p>
+          {{ end }}
+
+          {{ if .Params.song }}
+          <p><small>Song: <em>{{ .Params.song }}</em></small></p>
+          {{ end }}
+        </hgroup>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article class="col-12">
       {{ .Content }}
     </article>
+
   </div>
 </section>
 {{ end }}

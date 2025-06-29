@@ -1,0 +1,6 @@
+<p>You can find me on: </p>
+{{ range .Site.Params.social }}
+<a href="{{ .URL }}" aria-label="{{ .label }}">
+  <div class="social {{ .name }}"></div>
+</a>
+{{ end }}

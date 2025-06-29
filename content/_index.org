@@ -1,0 +1,7 @@
+#+TITLE: Home
+#+SUBTITLE: Marco Dalla Stella
+
+My name is Marco, and I’m a code alchemist, a thinker, and a musician.
+
+I’m the CTO and founder of [[https://7bridges.eu][7bridges]], a software consultant company, and admin of
+[[https://functional.cafe][functional.cafe]], an instance dedicated to functional programming. Read more [[/about-me/][about me]].

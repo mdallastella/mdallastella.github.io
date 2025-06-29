@@ -1,22 +1,38 @@
+{{ define "extras" }}
+<link rel="preload" as="image" href="/img/portrait.webp" type="image/png" fetchpriority="high">
+{{ end }}
+
 {{ define "main" }}
 <section class="row-fluid">
-  <div class="col-12 offset-md-2 col-md-4">
-    {{ partialCached "portrait.html" . }}
-    {{ .Content }}
-    <p>You can find me on:
-      {{ range .Site.Params.social }}
-      <a href="{{ .URL }}" aria-label="{{ .name }} profile">{{ .name }}</a>
-      {{ end }}
-    </p>
+  <!-- Left column: portrait + content + social -->
+  <div id="profile" class="col-12 offset-md-2 col-md-4">
+
+    <!-- Portrait -->
+    <div id="portrait">
+      <img class="portrait" src="/img/portrait.webp" alt="Marco's portrait" />
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      {{ .Content }}
+    </div>
+
+    <!-- Social -->
+    <div id="social">
+      {{ partialCached "social.html" . }}
+    </div>
   </div>
+
+  <!-- Right column: recent articles -->
   <div id="articles" class="col-12 offset-md-7 col-md-4">
     <hgroup>
-      <h3>Recent articles</h3>
+      <h2>Recent articles</h2>
     </hgroup>
     <ul>
       {{ range where site.RegularPages "Section" "articles" }}
       <li>{{ partial "article-link.html" . }}</li>
       {{ end }}
     </ul>
+  </div>
 </section>
 {{ end }}
