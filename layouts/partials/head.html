@@ -46,4 +46,8 @@
 <script src="https://cdn.plot.ly/plotly-3.0.1.js" charset="utf-8"></script>
 {{ end }}
 
+{{ if not hugo.IsDevelopment }}
+<script defer src="https://um.dallastella.name/script.js" data-website-id="282828a7-2f43-426d-8070-13b3d179982a"></script>
+{{ end }}
+
 {{ partialCached "css.html" . }}

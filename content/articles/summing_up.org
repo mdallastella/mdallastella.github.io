@@ -1,6 +1,6 @@
 #+TITLE: Summing up
-#+DATE: <2025-06-16 lun>
-#+TAGS[]: me work life
+#+DATE: <2025-06-28 Sat>
+#+TAGS[]: work life
 #+SONG: Nobody's Fault But My Own ⋅ Beck
 
 It is perhaps a bit strange to start a blog by summing things up… but it is
