@@ -51,4 +51,5 @@ dogs cheer me up when I am in a bad mood.
 #+CAPTION: Babù and Penny, my two maltese dogs.
 #+ATTR_HTML: :width auto
 #+ATTR_HTML: :alt Babù and Penny, my two maltese dogs.
-[[/img/blog/babu_and_penny.jpg]]
+#+ATTR_HTML: :loading lazy
+[[/img/blog/babu_and_penny.webp]]
