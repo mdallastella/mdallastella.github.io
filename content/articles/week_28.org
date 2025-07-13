@@ -1,0 +1,66 @@
+#+TITLE: Week 28
+#+DATE: <2025-07-13 Sun>
+#+TAGS[]: work life
+#+SONG: Wave ⋅ David Sylvian & Robert Fripp
+
+This is a summary of week 28, 2025:
+
+This week was quite challenging mentally. I'm looking forward to my trip to
+[[https://www.turismofvg.it/locality/fagagna][Fagagna]] with my partner and my dogs in a couple of weeks. Nice places, nice
+food, and nice company: I can't ask for more.
+
+** JavaScript and Vue.js
+I have to use [[https://vuejs.org/][Vue.js]] on one of my client's projects. I don't like it: it's
+messy, verbose, and counterintuitive. I don't know why anyone wants to work with
+something like this. I feel much better with an event-driven framework like
+[[https://day8.github.io/re-frame/re-frame/][re-frame]].
+
+The same goes for JavaScript as a language.
+
+I recently watched and enjoyed David Nolen's talk [[https://www.youtube.com/watch?v=An-ImWVppNQ][ClojureScript from First Principles]],
+and he makes a lot of good points about the current state of JS. It was
+interesting to learn why ClojureScript was based on the [[https://developers.google.com/closure/compiler][Google Closure Compiler]]
+and how powerful it is out of the box (no shadow-cljs needed).
+
+Some food for thought:
++ Even if there are better JS tools nowadays, web pages aren't faster or
+  lighter.
++ If the modern JS story is so great, why is there an overall sense of declining
+  software quality?
++ 7MB of transpiled ClojureScript compiles to 3KB of JavaScript code (in
+  1.5 seconds).
+
+
+** Python, ML, and Colorimetry
+In my spare time, I'm working on a small project to see if it's possible to
+train a neural network to return the spectrophotometric curve, given its [[https://en.wikipedia.org/wiki/CIELAB_color_space][L*a*b*]]
+values. I have a moderately sized dataset (300k+) to refine to make it truly useful.
+I'm using [[https://www.tensorflow.org/][TensorFlow]], [[https://pandas.pydata.org/][pandas]], [[https://scikit-learn.org/][scikit-learn]], and the [[https://www.colour-science.org/][Colour]] library. As soon as I get
+good results, I'll probably write an article.
+
+** Moving from GitHub
+I'm cleaning up and moving my private repositories from GitHub to a self-hosted
+instance of Gitea. It's probably a bit too late to escape Copilot, but it's
+never too late to keep AI away from my personal code.
+
+** Desktop environment
+In the last few months, I moved from Gnome to KDE, and back to Gnome.
+
+KDE was one of my first desktop environments (TBH, [[https://www.windowmaker.org/][Window Maker]] was my first, on
+Debian Potato), but it's not that stable on Wayland. (Sorry, guys, I think X11
+is dying.) Gnome is the least worst alternative I could find.
+
+Earlier this year, I tried different window managers: [[https://swaywm.org/][sway]], [[https://isaacfreund.com/software/river/][river]], and [[https://github.com/YaLTeR/niri][niri]]. I
+think niri is the way to go for me, since I'm not really a fan of tiling window
+managers (I tried sway with a tabbed layout by default). I was a fan of the OS X
+workflow between 2010 and 2015 when there was a workspace for each
+application. I can't use more than two applications at the same time since most
+of my workflow is keyboard-driven, and that's why I work with two monitors. The
+left monitor is usually the one I'm working on, while the right one is dedicated
+to something I have to look at, like documentation, websites, or logs.
+
+Niri really nails down this way of working. The only thing that keeps me away
+from a window manager is the hundreds of small utilities I have to manage to
+have a complete working environment: a notification daemon, a top bar, a
+launcher, a network manager, a screen locker, a power manager… It's too much for
+me to handle.
