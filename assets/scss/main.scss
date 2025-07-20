@@ -38,6 +38,10 @@
     --m-font-weight: 300;
 }
 
+b, strong {
+    font-weight: bold;
+}
+
 :where(h1) {
   margin-block: 0.67em;
   font-size: 2em;
