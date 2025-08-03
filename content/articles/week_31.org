@@ -1,0 +1,36 @@
+#+TITLE: Week 31
+#+DATE: <2025-08-03 Sun>
+#+TAGS[]: work life
+#+SONG: Drop D ⋅ Matteo Mancuso
+
+** Personal life
+I skipped last week, since I was on holiday. The weather was not nice to
+us, it rained three out of five days, but we had time to relax, eat good food,
+drink good wine (Friulano rules!), and spend more time with our dogs, without
+thinking too much about the troubles of our daily lives.
+
+** Work
+I'm still thinking about my future. I'm digging into different directions:
+
+*** Still toying with ML
+I'm continuing my studies on ML, the only downside is having to deal with
+Python. I know there are a lot of different possibilities out there: [[https://scicloj.github.io/noj/][Noj]] for
+Clojure, [[https://juliaml.github.io/][JuliaML]] for Julia, [[https://github.com/deeplearning4j/deeplearning4j][deeplearning4j]] for Java…
+
+I first need to wrap my head around the different ML possibilities (data
+massaging, techniques, algorithms…) and then I'll try to migrate some of my
+experiments to other languages.
+
+*** Vibecoding
+I don't exactly 'vibecode', but in the last couple of months I've used LLM
+(Gemini and Claude) as a rubber duck. I never completely trust the output, so I
+always check the sources if possible, and keep reading the documentation to
+understand what the suggested code does. Although LLMs can seem all-knowing,
+their knowledge is often outdated, and they get confused easily in a long and
+complex chat.
+
+*** Notable links of the week:
++ [[https://soatok.blog/2025/07/31/age-verification-doesnt-need-to-be-a-privacy-footgun/][Age Verification Doesn’t Need to Be a Privacy Footgun - Dhole Moments]]
++ [[https://lambdaisland.com/blog/2025-07-24-re-frame-app][The Hidden Lessons in a re-frame App]]
++ [[https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/][It's time for modern CSS to kill the SPA - Jono Alderson]]
++ [[https://huggingface.co/spaces/hesamation/primer-llm-embedding][LLM Embeddings Explained: A Visual and Intuitive Guide - a Hugging Face Space by hesamation]]
