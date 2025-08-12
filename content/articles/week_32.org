@@ -1,0 +1,22 @@
+#+TITLE: Week 32
+#+DATE: <2025-08-10 Sun>
+#+TAGS[]: work life
+#+SONG: Twenty Years ⋅ Placebo
+
+** Personal life
+The week went smoothly, not a lot to say. I finished reading [[https://en.wikipedia.org/wiki/The_Martian_(Weir_novel)][The Martian]]: nice
+book for an engineer (which I'm not), it reminds me of Robinson Crusoe. I'm now
+reading [[https://en.wikipedia.org/wiki/Recursion_(Crouch_novel)][Recursion]], quite tripping.
+
+** Work
+August is a quiet and dead month. I'm spending my time maintaining minor
+software bugs, doing some research on my favorite language (Clojure), and I
+started learning Rust. I found this course from Google ([[https://google.github.io/comprehensive-rust/index.html][Comprehensive Rust]]) and
+I'm going through it. Why not the official [[https://doc.rust-lang.org/book/][Rust Book]]? I have this complex, I'm
+unable to conform and I feel the need to take the "road less traveled".
+
+** Notable links of the week:
++ [[https://blog.nundrum.net/posts-output/2025-08-04-clojure-dbus/][bits all the way down: Clojure and D-Bus]]
++ [[https://www.wedesoft.de/software/2025/02/13/clojure-deploy-ml-models/][Deploying ML models in Clojure · Jan Wedekind]]
++ [[https://www.inc.com/jeff-haden/neuroscience-says-emotionally-intelligent-people-take-3-steps-to-reduce-stress-and-boost-confidence-skill-and-performance/91222602][Neuroscience Says Emotionally Intelligent People Take 3 Steps to Reduce Stress
+  and Boost Confidence, Skill, and Performance]]
