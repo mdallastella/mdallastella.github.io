@@ -5,24 +5,19 @@
   {{- .Title }} · {{ .Site.Title -}}
   {{ end }}
 </title>
-<meta name="description" content="{{ .Site.Params.description }}">
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+<meta name="description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="keywords" content="personal website, portfolio, blog{{ with .Site.Params.keywords }}, {{ . }}{{ end }}">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:title" content="{{ .Title }} · {{ .Site.Title }}">
-<meta property="og:description" content="{{ .Site.Params.description }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}/img/portrait.png">
+{{ template "_internal/opengraph.html" . }}
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="{{ .Permalink }}">
-<meta name="twitter:title" content="{{ .Title }} · {{ .Site.Title }}">
-<meta name="twitter:description" content="{{ .Site.Params.description }}">
-<meta name="twitter:image" content="{{ .Site.BaseURL }}/img/portrait.jpg">
+{{ template "_internal/twitter_cards.html" . }}
 
 <!-- Mastodon -->
 <meta name="fediverse:creator" content="{{ .Site.Params.mastodon }}" />
