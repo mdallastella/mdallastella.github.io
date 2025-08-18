@@ -115,6 +115,10 @@ footer p {
     grid-area: content;
 }
 
+.u-url {
+    text-decoration: none;
+}
+
 /* On wider screens (e.g., desktop), restore natural order */
 @media (min-width: 768px) {
     #profile {

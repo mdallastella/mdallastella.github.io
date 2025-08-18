@@ -2,7 +2,7 @@
 <header>
   <nav role="navigation" data-position="end" data-breakpoint="lg">
     <ul>
-      <li><a href="/">MDS</a></li>
+      <li><a href="{{ site.BaseURL }}" class="h-card" rel="me">{{ .Site.Params.author }}</a></li>
     </ul>
     <input type="checkbox" id="menu-btn" />
     <label for="menu-btn" style="font-size: calc(var(--m-font-size) * 2);" aria-label="Menu" aria-controls="top-nav">&#9776;</label>
