@@ -1,0 +1,52 @@
+#+TITLE: Week 33
+#+DATE: <2025-08-17 Sun>
+#+TAGS[]: work life
+#+SONG: Before I Forget ⋅ Slipknot
+
+** Personal life
+Nothing much is going on. The weather has been quite hot here in northern Italy,
+so I spent most of my time at home. Luckily, the temperature in the countryside
+drops in the evening, so we could sleep without air conditioning.
+
+We are having some trouble catching a mole that is destroying our garden. I'm
+trying some non-lethal methods, but I'm afraid the approach is not going to be
+effective.
+
+Did you know I love anime? Not that I talk a lot about it. Anyway, I saw an
+interesting series this week, different from my usual kind: [[https://en.wikipedia.org/wiki/Ping_Pong_(manga)][Ping Pong the
+Animation]]. I'm also looking forward to seeing the last [[https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba][Demon Slayer]] movie in
+September.
+
+I finished reading Recursion: not the best sci-fi thriller I've ever read, but still
+enjoyable. I'm now reading the first book of the [[https://en.wikipedia.org/wiki/Gone_(novel_series)][Gone]] series. I know, it's
+a teenager book series, but I usually read to escape reality and not to find the
+"Answer to the Ultimate Question of Life, the Universe, and Everything"™.
+
+** Work
+I should rename this section "Code". Not a lot of interesting stuff on this side. Like
+last week, I fixed some bugs on a customer project, and developed a couple of
+new features.
+
+I'm still tweaking my Niri setup. I wrote a couple of [[https://babashka.org/][Babashka]] scripts to switch
+workspaces and manage their position when I plug my laptop into different
+monitor configurations, you can find them [[https://gist.dallastella.name/mdallastella/niri-utilities][here]].
+
+Talking about Babashka, I'm also writing a small script to publish posts from my
+RSS feed to Mastodon automagically, I'll put it somewhere public as soon as it's
+ready.
+
+I'm slowly progressing with my Rust journey. It's difficult
+after almost ten years of Clojure to switch back to a strongly typed imperative
+language... Also, a lot of interesting languages compete with Rust, like Zig and
+Nim.
+
+I made some changes to this site as well: I changed from "articles" to "posts",
+'cause "articles" sounds a little pompous. I'm also adapting the website structure to
+[[http://microformats.org/wiki/Main_Page][microformats]], to make it compatible with [[https://indieweb.org/specifications][IndieWeb Specifications]]. The next big
+thing will be implementing comments (Mastodon? Don't know yet).
+
+** Notable links of the week
++ [[https://lisp.trane.studio/][[trane] - Music Making DSL & Environment in Janet via Wasm]] (Love Janet!)
++ [[https://www.youtube.com/watch?v=gRh57oXfmV8][Become So Disciplined People Call You Crazy (Miyamoto Musashi) - YouTube]]
++ [[https://itnext.io/the-origin-of-complexity-8ecb39130fc][The origin of complexity. Writing software is hard.]]
++ [[https://xvw.lol/en/articles/why-ocaml.html][xvw.lol - Why I chose OCaml as my primary language]] (OCaml always fascinated me)
