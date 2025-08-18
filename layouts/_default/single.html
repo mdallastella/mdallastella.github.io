@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="row">
-  <div class="flex col-12 offset-md-2 col-md-8">
+  <article class="h-entry flex col-12 offset-md-2 col-md-8">
 
     <!-- Header split in two columns -->
     <header class="row col-12 align-center">
@@ -40,11 +40,11 @@
     </header>
 
     <!-- Post Content -->
-    <article class="h-entry col-12">
-      <div class="e-content p-name">
+    <div class="col-12">
+      <div class="e-content">
         {{ .Content }}
       </div>
-    </article>
-  </div>
+    </div>
+  </article>
 </section>
 {{ end }}

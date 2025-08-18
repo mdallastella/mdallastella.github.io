@@ -1,6 +1,6 @@
 {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
 {{ $dateHuman := .Date | time.Format ":date_long" }}
-<hgroup id="article-link">
+<hgroup id="post-link">
   <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
   <p><small><time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> ⋅ {{ .ReadingTime }}m reading</small></p>
 </hgroup>

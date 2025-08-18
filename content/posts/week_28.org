@@ -36,7 +36,7 @@ In my spare time, I'm working on a small project to see if it's possible to
 train a neural network to return the spectrophotometric curve, given its [[https://en.wikipedia.org/wiki/CIELAB_color_space][L*a*b*]]
 values. I have a moderately sized dataset (300k+) to refine to make it truly useful.
 I'm using [[https://www.tensorflow.org/][TensorFlow]], [[https://pandas.pydata.org/][pandas]], [[https://scikit-learn.org/][scikit-learn]], and the [[https://www.colour-science.org/][Colour]] library. As soon as I get
-good results, I'll probably write an article.
+good results, I'll probably write an post.
 
 ** Moving from GitHub
 I'm cleaning up and moving my private repositories from GitHub to a self-hosted

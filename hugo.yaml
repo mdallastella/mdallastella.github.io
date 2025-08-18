@@ -24,14 +24,14 @@ params:
       label: "LinkedIn"
       URL: "https://www.linkedin.com/in/marcodallastella"
     - name: "rss"
-      label: "RSS article feed"
+      label: "RSS post feed"
       URL: "/index.xml"
 
 menu:
   main:
     - identifier: "posts"
-      name: "Articles"
-      url: "/articles/"
+      name: "Posts"
+      url: "/posts/"
       weight: 2
     - identifier: "about"
       name: "About me"

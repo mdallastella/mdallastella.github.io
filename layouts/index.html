@@ -23,14 +23,14 @@
     </div>
   </div>
 
-  <!-- Right column: recent articles -->
-  <div id="articles" class="col-12 offset-md-7 col-md-4">
+  <!-- Right column: recent posts -->
+  <div id="posts" class="col-12 offset-md-7 col-md-4">
     <hgroup>
-      <h2>Recent articles</h2>
+      <h2>Recent posts</h2>
     </hgroup>
     <ul>
-      {{ range where site.RegularPages "Section" "articles" }}
-      <li>{{ partial "article-link.html" . }}</li>
+      {{ range where site.RegularPages "Section" "posts" }}
+      <li>{{ partial "post-link.html" . }}</li>
       {{ end }}
     </ul>
   </div>
