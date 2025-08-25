@@ -1,0 +1,44 @@
+#+TITLE: Week 34
+#+DATE: <2025-08-24 Sun>
+#+TAGS[]: work life
+#+SONG: What Else Is There? ⋅ Röyksopp
+
+** Personal life
+I turned 44 on Sunday 24, so now I'm officially older than my grandfather. It's
+funny thinking that me and my father are older than he was. He lived through the
+'40s to the '70s, saw a world war and the reconstruction of a nation… He
+probably lived more lives in his 43 years on this earth that I'll ever
+live.
+
+Time is relative for sure. If you have a PhD in physics, sorry for the joke.
+
+The "Gone" book I'm reading is not that bad, but it's reeealllyy teenager
+material: I'm going to finish this one, but I'm not going on with the series: I
+don't think is going to grow and get more mature alongside the reader like Harry
+Potter books.
+
+I bought myself a pair of [[https://moondroplab.com/en/products/space-travel-2][Moondrop Space Travel 2]]: they sound really good for
+their low price.
+
+** Code
+It was a quiet week, a lot of people were still on holiday leaves. Still working
+on a Python/Vue project and man, it really hurts. I don't get why Python is so
+popular: the syntax is verbose, it's slow as hell, concurrency is a joke… and
+yet is the number one language for AI… go figure. On the other hand, Vue is one
+of the worst framework I have ever worked with: it's hard to figure out who
+changed a [[https://vuejs.org/guide/essentials/reactivity-fundamentals.html#ref][ref]], [[https://vuejs.org/guide/essentials/computed.html][computed]] hides its reactive dependencies, errors in the browser
+console are hard to understand. I don't like it at all.
+
+I keep going on with my Rust studies, even if I find quite hard to understand why
+programming should be so hard. I mean, it's obviously hard to solve a complex
+problem by itself, why should I have also to struggle against the language?
+
+I also worked a bit on another Babashka script for [[https://github.com/Alexays/Waybar][waybar]] widgets, a tailscale
+simple monitor. I'm going to publish a git repo with all these scripts on
+week 35.
+
+
+** Notable links of the week
++ [[https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/][Weaponizing image scaling against production AI systems -The Trail of Bits Blog]]
++ [[https://dev.to/pvgomes/why-llm-predictions-are-dangerous-for-finance-j2i][Why LLM predictions are dangerous for Finance? - DEV Community]]
++ [[https://jakub.kr/components/oklch-colors][What are OKLCH colors?]]
