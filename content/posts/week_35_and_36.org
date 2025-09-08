@@ -1,0 +1,34 @@
+#+TITLE: Week 35 and 36
+#+DATE: <2025-09-07 Sun>
+#+TAGS[]: work life
+#+SONG: Seas of Cheese ⋅ Primus
+
+** Personal life
+Last couple of weeks have been pretty boring, not much has happened. I'm starting
+to get a bit fed up with some matters I have pending.
+
+I finished "Gone" and, since I don't have a real alternative, I started "Hunger"
+from the same serie: it's easy to read, but boring, perfect for bedtime.
+
+I'm doing more gardening, I enjoy doing something with my hands other than
+pressing keys on a keyboard, it makes me feel real.
+
+** Code
+In my free time I'm working on a RSS to Mastodon [[https://babashka.org/][Babashka]] project, to
+automatically toot my posts to [[https://functional.cafe][Functional Cafe]].
+
+I'm searching for an alternative to Vue to match with the Python project I'm
+working on. [[https://htmx.org/][HTMX]] and [[https://data-star.dev/][Datastar]] sound promising, but the fact that you have to
+send HTML across websocket / server-sent events (SSE) smells bad to me…
+Applications should send and receive data, not fragments of HTML (which is data, I
+know).
+
+I've always been told to decoupling software parts to achieve the highest
+flexibility.
+
+Probably I don't get which are the best applications of this two frameworks.
+
+** Notable links of the week
++ [[https://eca.dev/][ECA - Editor Code Assistant]]
++ [[https://martinfowler.com/articles/202508-ai-thoughts.html][Some thoughts on LLMs and Software Development]] - Martin Fowler
++ [[https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/][Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity]]
