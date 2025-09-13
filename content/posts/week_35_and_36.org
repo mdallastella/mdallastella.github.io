@@ -4,29 +4,29 @@
 #+SONG: Seas of Cheese ⋅ Primus
 
 ** Personal life
-Last couple of weeks have been pretty boring, not much has happened. I'm starting
-to get a bit fed up with some matters I have pending.
+The last couple of weeks have been pretty boring; not much has happened. I'm
+starting to get a bit fed up with some unresolved matters.
 
 I finished "Gone" and, since I don't have a real alternative, I started "Hunger"
-from the same serie: it's easy to read, but boring, perfect for bedtime.
+from the same series. It's easy to read but boring—perfect for bedtime.
 
-I'm doing more gardening, I enjoy doing something with my hands other than
-pressing keys on a keyboard, it makes me feel real.
+I'm doing more gardening; I enjoy doing something with my hands other than
+pressing keys on a keyboard. It makes me feel real.
 
 ** Code
-In my free time I'm working on a RSS to Mastodon [[https://babashka.org/][Babashka]] project, to
+In my free time, I'm working on an RSS-to-Mastodon project with [[https://babashka.org/][Babashka]] to
 automatically toot my posts to [[https://functional.cafe][Functional Cafe]].
 
-I'm searching for an alternative to Vue to match with the Python project I'm
+I'm searching for an alternative to Vue to use with the Python project I'm
 working on. [[https://htmx.org/][HTMX]] and [[https://data-star.dev/][Datastar]] sound promising, but the fact that you have to
-send HTML across websocket / server-sent events (SSE) smells bad to me…
-Applications should send and receive data, not fragments of HTML (which is data, I
-know).
+send HTML over WebSockets or Server-Sent Events (SSE) feels off to me…
+Applications should send and receive data, not fragments of HTML (which is data,
+I know).
 
-I've always been told to decoupling software parts to achieve the highest
-flexibility.
+I've always been told to decouple software parts to achieve maximum flexibility.
 
-Probably I don't get which are the best applications of this two frameworks.
+I probably don't yet understand which kinds of applications these frameworks are
+best suited for.
 
 ** Notable links of the week
 + [[https://eca.dev/][ECA - Editor Code Assistant]]
