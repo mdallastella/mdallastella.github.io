@@ -29,10 +29,11 @@
       <h2>Recent posts</h2>
     </hgroup>
     <ul>
-      {{ range where site.RegularPages "Section" "posts" }}
+      {{ range first 5 (where site.RegularPages "Section" "posts") }}
       <li>{{ partial "post-link.html" . }}</li>
       {{ end }}
     </ul>
+    <a href="/posts/">More…</a>
   </div>
 </section>
 {{ end }}
