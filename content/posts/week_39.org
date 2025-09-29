@@ -1,0 +1,29 @@
+#+TITLE: Week 39
+#+DATE: <2025-09-28 Sun>
+#+TAGS[]: work life
+#+SONG: 7empest ⋅ Tool
+
+** Personal
+This was a hard week for my anxiety, probably due to the sudden change of
+season (the temperature dropped by 10 degrees, I think), and some personal
+issues.
+
+How this affect my daily life? I'm agoraphobic, so I have huge anxiety when I
+travel alone, even on short distances. That's very annoying, there are good
+times and bad times: fortunately, over the past decade, the bad times have
+become increasingly rare, I will survive this as well.
+
+** Code
+I didn't code much outside daily work this week, due to the personal stuff
+aforementioned.
+
+I experimented a bit with [[https://en.wikipedia.org/wiki/Shapley_value#In_machine_learning][SHAP analysis]] (using [[https://shap.readthedocs.io/en/latest/][this]] library) to explain the
+impact of the parameters on a multi-label classification ML model.
+
+Other than this, I played a bit with [[https://tidalcycles.org/][TidalCycles]], [[https://github.com/overtone/overtone/][Overtone]], and [[https://supercollider.github.io/][SuperCollider]]
+for music and sound design.
+
+** Notable links
++ [[https://apnews.com/article/japan-ise-sacred-shrine-rebuilt-destroyed-shinto-religion-5828f94e07da91f2ca9a12ea777b7b96][Japan's most sacred Shinto shrine is rebuilt again and again | AP News]]
++ [[https://pmc.ncbi.nlm.nih.gov/articles/PMC11513550/][Practical guide to SHAP analysis: Explaining supervised machine learning model predictions]]
++ [[https://souffle-lang.github.io/][Soufflé | Soufflé • A Datalog Synthesis Tool for Static Analysis]]
