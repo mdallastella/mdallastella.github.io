@@ -125,6 +125,12 @@ footer p {
     text-decoration: none;
 }
 
+/* Post style */
+figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 /* On wider screens (e.g., desktop), restore natural order */
 @media (min-width: 768px) {
     #profile {
