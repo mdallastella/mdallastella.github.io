@@ -1,0 +1,3 @@
+(ns hello)
+
+(alert "Hello!")
