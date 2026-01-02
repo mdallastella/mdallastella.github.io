@@ -32,6 +32,9 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ .Permalink }}">
 
+<!-- Mastodon -->
+<link rel="me" href="https://functional.cafe/@mdallastella">
+
 <!-- RSS -->
 {{ with .OutputFormats.Get "rss" -}}
 {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
