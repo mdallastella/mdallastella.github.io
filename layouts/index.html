@@ -5,26 +5,26 @@
 {{ define "main" }}
 <section class="row-fluid">
   <!-- Left column: portrait + content + social -->
-  <div id="profile" class="col-12 offset-md-2 col-md-4">
+  <div class="profile col-12 offset-md-2 col-md-4">
 
     <!-- Portrait -->
-    <div id="portrait">
+    <div class="profile-portrait">
       <img class="portrait" src="{{ "img/portrait.webp" | relURL }}" alt="Marco's portrait" decoding="async" />
     </div>
 
     <!-- Content -->
-    <div id="content">
+    <div class="profile-content">
       {{ .Content }}
     </div>
 
     <!-- Social -->
-    <div id="social">
+    <div class="profile-social">
       {{ partialCached "social.html" . }}
     </div>
   </div>
 
   <!-- Right column: recent posts -->
-  <div id="posts" class="col-12 offset-md-7 col-md-4">
+  <div class="posts col-12 offset-md-7 col-md-4">
     <hgroup>
       <h2>Recent posts</h2>
     </hgroup>

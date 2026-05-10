@@ -47,23 +47,23 @@ b, strong {
   font-size: 2em;
 }
 
-#posts ul {
+.posts ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#posts li {
+.posts li {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#posts li + li {
+.posts li + li {
     margin-top: 0.9rem;
 }
 
-#posts p {
+.posts p {
     font-size: 0.7rem;
 }
 
@@ -79,7 +79,7 @@ body {
     min-height: 100vh;
 }
 
-#posts {
+.posts {
     margin: auto 0;
 }
 
@@ -99,7 +99,7 @@ footer p {
     color: black;
 }
 
-#profile {
+.profile {
     display: grid;
     grid-template-areas:
         "portrait"
@@ -110,7 +110,7 @@ footer p {
 }
 
 /* Assign each child to a grid area */
-#portrait {
+.profile-portrait {
     grid-area: portrait;
     justify-self: center;
 }
@@ -121,7 +121,7 @@ footer p {
     height: auto;
 }
 
-#social {
+.profile-social {
     grid-area: social;
     display: flex;
     gap: 10px;
@@ -129,14 +129,14 @@ footer p {
     justify-content: flex-start;
 }
 
-#content {
+.profile-content {
     grid-area: content;
     justify-self: start;
 }
 
-#portrait,
-#content,
-#social {
+.profile-portrait,
+.profile-content,
+.profile-social {
     width: min(100%, 28rem);
 }
 
@@ -162,13 +162,13 @@ figcaption {
 
 /* On wider screens (e.g., desktop), restore natural order */
 @media (max-width: 767px) {
-    #posts {
+    .posts {
         width: min(100%, 28rem);
         margin-inline: auto;
         text-align: center;
     }
 
-    #portrait {
+    .profile-portrait {
         text-align: center;
     }
 
