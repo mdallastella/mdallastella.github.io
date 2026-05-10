@@ -47,24 +47,30 @@ b, strong {
   font-size: 2em;
 }
 
-#posts > ul {
+#posts ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#posts ul li {
+#posts li {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+#posts li + li {
+    margin-top: 0.9rem;
 }
 
 #posts p {
     font-size: 0.7rem;
 }
 
-#post-link .title {
-    font-size: 1.5rem;
+.post-link .title {
+    display: inline-block;
+    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+    line-height: 1.25;
 }
 
 body {
@@ -96,33 +102,56 @@ footer p {
 #profile {
     display: grid;
     grid-template-areas:
-        "content"
         "portrait"
+        "content"
         "social";
-    justify-content: left;
+    justify-items: start;
+    gap: 0.75rem;
 }
 
 /* Assign each child to a grid area */
 #portrait {
     grid-area: portrait;
+    justify-self: center;
 }
 
 .portrait {
-    height: 200px;
+    display: block;
+    width: min(100%, 16rem);
+    height: auto;
 }
 
 #social {
     grid-area: social;
     display: flex;
     gap: 10px;
+    justify-self: start;
+    justify-content: flex-start;
 }
 
 #content {
     grid-area: content;
+    justify-self: start;
+}
+
+#portrait,
+#content,
+#social {
+    width: min(100%, 28rem);
 }
 
 .u-url {
     text-decoration: none;
+}
+
+.social-link {
+    display: inline-flex;
+    border-radius: 0.25rem;
+}
+
+.social-link:focus-visible {
+    outline: 2px solid var(--m-primary);
+    outline-offset: 2px;
 }
 
 /* Post style */
@@ -132,21 +161,31 @@ figcaption {
 }
 
 /* On wider screens (e.g., desktop), restore natural order */
-@media (min-width: 768px) {
-    #profile {
-        grid-template-areas:
-            "portrait"
-            "content"
-            "social";
+@media (max-width: 767px) {
+    #posts {
+        width: min(100%, 28rem);
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    #portrait {
+        text-align: center;
     }
 
     .portrait {
-        height: 400px;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .portrait {
+        width: min(100%, 22rem);
     }
 }
 
 // Icons
 .social {
+    display: block;
     width: 32px;
     height: 32px;
 }
