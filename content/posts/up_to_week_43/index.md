@@ -115,7 +115,7 @@ Thanks to OpenRouter I managed to:
 
 ### Go
 
-After [giving up](file:///posts/week_37/) with Rust, I took a look at
+After [giving up](/posts/week_37/) with Rust, I took a look at
 Zig, but I don't think the ecosystem is mature yet for production and,
 like Rust, it's too low level for my needs.
 
