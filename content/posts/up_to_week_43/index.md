@@ -9,7 +9,7 @@ song:
 
 In the last weeks there were some ups and downs, I had to deal with some
 anxiety, but it has been much better than [week
-39](file:///posts/week_39/). The change of season and the switch from
+39](/posts/week_39/). The change of season and the switch from
 DST to Standard Time always takes a toll on my mental health.
 
 That said, I'm not a hermit. I'm still enjoying going out with my

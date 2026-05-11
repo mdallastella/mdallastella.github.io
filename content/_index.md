@@ -9,4 +9,4 @@ Software developer, and admin of
 [functional.cafe](https://functional.cafe), an instance dedicated to
 functional programming.
 
-Read more [about me](file:///about-me/).
+Read more [about me](/about-me/).

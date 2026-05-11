@@ -63,6 +63,6 @@ much about work. Also, my two dogs cheer me up when I am in a bad mood.
 
 <figure width="auto" alt="Babù and Penny, my two maltese dogs."
 loading="lazy">
-<img src="file:///img/blog/babu_and_penny.webp" />
+<img src="/img/blog/babu_and_penny.webp" />
 <figcaption>Babù and Penny, my two maltese dogs.</figcaption>
 </figure>
