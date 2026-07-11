@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "macros/post_link.html" as macros %}
 
 {% block extras %}
 <link rel="preload" as="image" href="{{ get_url(path='img/portrait.webp') }}" type="image/webp" fetchpriority="high">
@@ -33,12 +34,7 @@
     <ul>
       {% set posts = get_section(path="posts/_index.md") %}
       {% for p in posts.pages | slice(end=5) %}
-      <li>
-        <hgroup class="post-link">
-          <a class="title" href="{{ p.extra.external_link | default(value=p.permalink | safe) | safe }}">{{ p.title }}</a>
-          <p><small><time datetime="{{ p.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">{{ p.date | date(format='%B %e, %Y') }}</time> ⋅ {{ p.reading_time }}m reading</small></p>
-        </hgroup>
-      </li>
+      <li>{{ macros::post_link(post=p) }}</li>
       {% endfor %}
     </ul>
     <a href="/posts/">More…</a>

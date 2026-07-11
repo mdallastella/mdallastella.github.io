@@ -1,0 +1,6 @@
+{% macro post_link(post) %}
+<hgroup class="post-link">
+  <a class="title" href="{{ post.extra.external_link | default(value=post.permalink | safe) | safe }}">{{ post.title }}</a>
+  <p><small><time datetime="{{ post.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">{{ post.date | date(format='%B %e, %Y') }}</time> ⋅ {{ post.reading_time }}m reading</small></p>
+</hgroup>
+{% endmacro post_link %}
