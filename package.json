@@ -1,11 +1,6 @@
 {
+  "packageManager": "pnpm@11.3.0",
   "devDependencies": {
-    "@yohns/picocss": "^2.2.9",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
-    "postcss-cli": "^11.0.0"
-  },
-  "dependencies": {
-    "squint-cljs": "^0.8.154"
+    "@yohns/picocss": "^2.2.9"
   }
 }
