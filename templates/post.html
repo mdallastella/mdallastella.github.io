@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="row">
+  <article class="h-entry flex col-12 offset-md-2 col-md-8">
+
+    <!-- Header split in two columns -->
+    <header class="row col-12 align-center">
+
+      <!-- Title (Left column) -->
+      <div class="col-12 col-md-6">
+        <hgroup>
+          <h1 class="p-name"><a class="u-url" href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
+        </hgroup>
+      </div>
+
+      <!-- Meta info (Right column) -->
+      <div class="col-12 col-md-6">
+        <hgroup>
+          <p><small class="text-muted">
+            <time class="dt-published" datetime="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">{{ page.date | date(format='%B %e, %Y') }}</time>
+          </small></p>
+
+          {% if page.taxonomies.tags %}
+          <p><small>
+            tags:
+            {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">#{{ tag }}</a>
+            {% endfor %}
+          </small></p>
+          {% endif %}
+
+          {% if page.extra.song %}
+          <p><small>Song: <em>{{ page.extra.song }}</em></small></p>
+          {% endif %}
+        </hgroup>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <div class="col-12">
+      <div class="e-content">
+        {{ page.content | safe }}
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock main %}

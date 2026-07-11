@@ -1,10 +1,13 @@
----
-date: 2025-07-13
-title: Week 28
-tags: ["work", "life"]
-song: Wave ⋅ David Sylvian & Robert Fripp
----
++++
+title = "Week 28"
+date = 2025-07-13
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Wave ⋅ David Sylvian & Robert Fripp"
++++
 This is a summary of week 28, 2025:
 
 This week was quite challenging mentally. I'm looking forward to my trip

@@ -1,10 +1,13 @@
----
-date: 2025-06-28
-title: Summing up
-tags: ["work", "life"]
-song: Nobody's Fault But My Own ⋅ Beck
----
++++
+title = "Summing up"
+date = 2025-06-28
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Nobody's Fault But My Own ⋅ Beck"
++++
 It is perhaps a bit strange to start a blog by summing things up… but it
 is still a starting point.
 

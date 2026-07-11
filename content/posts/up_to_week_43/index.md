@@ -1,10 +1,10 @@
----
-date: 2025-11-02
-title: Up to week 43
-tags: ["work", "life"]
-song:
----
++++
+title = "Up to week 43"
+date = 2025-11-02
 
+[taxonomies]
+tags = ["work", "life"]
++++
 ## Personal
 
 In the last weeks there were some ups and downs, I had to deal with some

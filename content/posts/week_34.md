@@ -1,10 +1,13 @@
----
-date: 2025-08-24
-title: Week 34
-tags: ["work", "life"]
-song: What Else Is There? ⋅ Röyksopp
----
++++
+title = "Week 34"
+date = 2025-08-24
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "What Else Is There? ⋅ Röyksopp"
++++
 ## Personal life
 
 I turned 44 on Sunday 24, so now I'm officially older than my

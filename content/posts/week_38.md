@@ -1,10 +1,13 @@
----
-date: 2025-09-21
-title: Week 38
-tags: ["work", "life"]
-song: Epitaph ⋅ King Crimson
----
++++
+title = "Week 38"
+date = 2025-09-21
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Epitaph ⋅ King Crimson"
++++
 ## Personal
 
 Another boring week, the weather in Italy has been nice but between work

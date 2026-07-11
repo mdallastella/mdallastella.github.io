@@ -1,7 +1,6 @@
----
-title: About me
----
-
++++
+title = "About me"
++++
 My name is Marco and I’m a code alchemist, thinker, and musician.
 
 Alchemist, ‘cause I think computer science is about transmutation:

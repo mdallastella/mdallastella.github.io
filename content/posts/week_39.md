@@ -1,11 +1,13 @@
----
-date: 2025-09-28
-title: Week 39
-tags: ["work", "life"]
-song: 7empest ⋅ Tool
++++
+title = "Week 39"
+date = 2025-09-28
 
----
+[taxonomies]
+tags = ["work", "life"]
 
+[extra]
+song = "7empest ⋅ Tool"
++++
 ## Personal
 
 This was a hard week for my anxiety, probably due to the sudden change

@@ -1,0 +1,6 @@
+<p>You can find me on: </p>
+{% for s in config.extra.social %}
+<a class="social-link" href="{{ s.url | safe }}" aria-label="{{ s.label }}">
+  <span class="social {{ s.name }}" aria-hidden="true"></span>
+</a>
+{% endfor %}

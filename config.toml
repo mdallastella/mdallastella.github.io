@@ -1,0 +1,52 @@
+base_url = "https://marco.dallastella.name"
+title = "Marco Dalla Stella"
+description = "Marco, a code alchemist and thinker, transforms raw data into noble insights. Software developer and admin of Functional Cafè. Blending science, philosophy, and programming wizardry, Marco solves fascinating problems with clarity and purpose, crafting beauty through programming."
+default_language = "en"
+
+compile_sass = true
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+build_search_index = false
+
+taxonomies = [
+    { name = "tags", feed = true },
+]
+
+# Preserve existing Hugo URLs (keep underscores in post paths)
+[slugify]
+paths = "safe"
+
+[markdown]
+render_emoji = true
+
+[markdown.highlighting]
+enabled = true
+theme = "solarized-light"
+
+[extra]
+author = "Marco Dalla Stella"
+mastodon = "@mdallastella@functional.cafe"
+mastodon_url = "https://functional.cafe/@mdallastella"
+
+[[extra.menu]]
+name = "Posts"
+url = "/posts/"
+
+[[extra.menu]]
+name = "About me"
+url = "/about-me/"
+
+[[extra.social]]
+name = "mastodon"
+label = "Mastodon"
+url = "https://functional.cafe/@mdallastella"
+
+[[extra.social]]
+name = "github"
+label = "GitHub"
+url = "https://github.com/mdallastella"
+
+[[extra.social]]
+name = "rss"
+label = "RSS post feed"
+url = "/rss.xml"

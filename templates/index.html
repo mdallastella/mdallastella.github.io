@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block extras %}
+<link rel="preload" as="image" href="{{ get_url(path='img/portrait.webp') }}" type="image/webp" fetchpriority="high">
+{% endblock extras %}
+
+{% block main %}
+<section class="row-fluid">
+  <!-- Left column: portrait + content + social -->
+  <div class="profile col-12 offset-md-2 col-md-4">
+
+    <!-- Portrait -->
+    <div class="profile-portrait">
+      <img class="portrait" src="{{ get_url(path='img/portrait.webp') }}" alt="Marco's portrait" decoding="async" />
+    </div>
+
+    <!-- Content -->
+    <div class="profile-content">
+      {{ section.content | safe }}
+    </div>
+
+    <!-- Social -->
+    <div class="profile-social">
+      {% include "partials/social.html" %}
+    </div>
+  </div>
+
+  <!-- Right column: recent posts -->
+  <div class="posts col-12 offset-md-7 col-md-4">
+    <hgroup>
+      <h2>Recent posts</h2>
+    </hgroup>
+    <ul>
+      {% set posts = get_section(path="posts/_index.md") %}
+      {% for p in posts.pages | slice(end=5) %}
+      <li>
+        <hgroup class="post-link">
+          <a class="title" href="{{ p.extra.external_link | default(value=p.permalink | safe) | safe }}">{{ p.title }}</a>
+          <p><small><time datetime="{{ p.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">{{ p.date | date(format='%B %e, %Y') }}</time> ⋅ {{ p.reading_time }}m reading</small></p>
+        </hgroup>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="/posts/">More…</a>
+  </div>
+</section>
+{% endblock main %}

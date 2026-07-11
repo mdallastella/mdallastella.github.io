@@ -1,10 +1,13 @@
----
-date: 2025-07-20
-title: Week 29
-tags: ["work", "life"]
-song: Accade ⋅ C.S.I.
----
++++
+title = "Week 29"
+date = 2025-07-20
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Accade ⋅ C.S.I."
++++
 This is a summary of week 29, 2025:
 
 This week went quite smoothly, but not really productive, with some

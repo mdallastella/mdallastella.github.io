@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="row">
+  <div class="posts col-12 offset-md-2 col-md-8">
+    <hgroup>
+      <h1>#{{ term.name }}</h1>
+    </hgroup>
+    <ul>
+      {% for p in term.pages %}
+      <li>
+        <hgroup class="post-link">
+          <a class="title" href="{{ p.extra.external_link | default(value=p.permalink | safe) | safe }}">{{ p.title }}</a>
+          <p><small><time datetime="{{ p.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}">{{ p.date | date(format='%B %e, %Y') }}</time> ⋅ {{ p.reading_time }}m reading</small></p>
+        </hgroup>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock main %}

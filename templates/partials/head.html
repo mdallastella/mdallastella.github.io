@@ -1,0 +1,63 @@
+{# Resolve title/description for pages, sections, taxonomy terms, or fall back to site defaults #}
+{% set_global page_title = config.title %}
+{% set_global page_desc = config.description %}
+{% if page %}
+  {% set_global page_title = page.title %}
+  {% if page.description %}{% set_global page_desc = page.description %}{% endif %}
+{% elif section and section.title %}
+  {% set_global page_title = section.title %}
+  {% if section.description %}{% set_global page_desc = section.description %}{% endif %}
+{% elif term %}
+  {% set_global page_title = "#" ~ term.name %}
+{% endif %}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ page_title }} · {{ config.title }}</title>
+<meta name="description" content="{{ page_desc }}">
+<meta name="author" content="{{ config.extra.author }}">
+<meta name="keywords" content="personal website, portfolio, blog">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_desc }}">
+<meta property="og:type" content="{% if page %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ config.title }}">
+<meta property="og:image" content="{{ get_url(path='img/portrait.webp') }}">
+{% if current_url %}<meta property="og:url" content="{{ current_url | safe }}">{% endif %}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_desc }}">
+<meta name="twitter:image" content="{{ get_url(path='img/portrait.webp') }}">
+
+<!-- Mastodon -->
+<meta name="fediverse:creator" content="{{ config.extra.mastodon }}" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+{% if current_url %}<link rel="canonical" href="{{ current_url | safe }}">{% endif %}
+<link rel="me" href="{{ config.extra.mastodon_url | safe }}">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ get_url(path='rss.xml') }}">
+
+{% if page and page.extra.plotly %}
+<script src="https://cdn.plot.ly/plotly-3.0.1.js" charset="utf-8"></script>
+{% endif %}
+
+{% if config.base_url is starting_with("https") %}
+<script defer src="https://um.dallastella.name/script.js" data-website-id="282828a7-2f43-426d-8070-13b3d179982a"></script>
+{% endif %}
+
+<!-- Styles -->
+<link rel="preload" href="{{ get_url(path='fonts/IosevkaFixedSS04-Light.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ get_url(path='css/pico.min.css', cachebust=true) }}">
+<link rel="stylesheet" href="{{ get_url(path='main.css', cachebust=true) }}">

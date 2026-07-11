@@ -1,10 +1,13 @@
----
-date: 2025-09-07
-title: Week 35 and 36
-tags: ["work", "life"]
-song: Seas of Cheese ⋅ Primus
----
++++
+title = "Week 35 and 36"
+date = 2025-09-07
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Seas of Cheese ⋅ Primus"
++++
 ## Personal life
 
 The last couple of weeks have been pretty boring; not much has happened.

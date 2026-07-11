@@ -1,10 +1,13 @@
----
-date: 2025-08-17
-title: Week 33
-tags: ["work", "life"]
-song: Before I Forget ⋅ Slipknot
----
++++
+title = "Week 33"
+date = 2025-08-17
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Before I Forget ⋅ Slipknot"
++++
 ## Personal life
 
 Nothing much is going on. The weather has been quite hot here in

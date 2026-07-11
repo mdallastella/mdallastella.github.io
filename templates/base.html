@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}" data-theme="light">
+  <head>
+    {% include "partials/head.html" %}
+    {% block extras %}{% endblock extras %}
+  </head>
+  <body>
+    {% include "partials/header.html" %}
+    <main class="container-fluid" role="main">
+      {% block main %}{% endblock main %}
+    </main>
+    {% include "partials/footer.html" %}
+  </body>
+</html>

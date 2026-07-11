@@ -1,10 +1,13 @@
----
-date: 2025-08-10
-title: Week 32
-tags: ["work", "life"]
-song: Twenty Years ⋅ Placebo
----
++++
+title = "Week 32"
+date = 2025-08-10
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Twenty Years ⋅ Placebo"
++++
 ## Personal life
 
 The week went smoothly, not a lot to say. I finished reading [The

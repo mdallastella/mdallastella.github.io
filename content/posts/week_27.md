@@ -1,10 +1,13 @@
----
-date: 2025-07-06
-title: Week 27
-tags: ["work", "life"]
-song: How Soon Is Now? ⋅ The Smiths
----
++++
+title = "Week 27"
+date = 2025-07-06
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "How Soon Is Now? ⋅ The Smiths"
++++
 This is a summary of week 27:
 
 ## Taking notes

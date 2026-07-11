@@ -1,10 +1,13 @@
----
-date: 2025-08-03
-title: Week 31
-tags: ["work", "life"]
-song: Accade ⋅ C.S.I.
----
++++
+title = "Week 31"
+date = 2025-08-03
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Accade ⋅ C.S.I."
++++
 ## Personal life
 
 I skipped last week, since I was on holiday. The weather was not nice to

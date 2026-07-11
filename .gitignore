@@ -1,4 +1,2 @@
-/node_modules/
-/.hugo_build.lock
-/resources/
+# Zola build output
 /public/

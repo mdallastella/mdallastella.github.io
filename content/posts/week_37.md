@@ -1,10 +1,13 @@
----
-date: 2025-09-14
-title: Week 37
-tags: ["work", "life"]
-song: Heaven Knows I'm Miserable Now ⋅ The Smiths
----
++++
+title = "Week 37"
+date = 2025-09-14
 
+[taxonomies]
+tags = ["work", "life"]
+
+[extra]
+song = "Heaven Knows I'm Miserable Now ⋅ The Smiths"
++++
 ## Personal life
 
 Another boring week. I finished "Hunger" and started "Lies". Like the
