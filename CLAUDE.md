@@ -27,6 +27,7 @@ Zola's built-in Sass compiler (grass) **cannot compile PicoCSS 2.x** (it uses `c
 - **URL/`safe` gotcha:** Tera HTML-escapes `/` to `&#x2F;`, and `{{ ... | safe }}` does **not** work inside macros. Pipe URL values (`permalink`, `current_url`, `config`/`extra` URLs, `get_taxonomy_url`) through `| safe` in templates. `get_url(...)` output is already safe.
 - Site params live in `[extra]` in `config.toml` (author, mastodon, `menu`, `social`); read as `config.extra.*`.
 - Plotly: a post using `{{/* plotly(json="...", height="...") */}}` must set `extra.plotly = true` so the library loads.
+- Responsive images: the `figure` shortcode (`templates/shortcodes/figure.html`) generates webp variants at 320/480/640/960/1280 via `resize_image` (`op="fit"`, `height=10000` to keep width the binding dimension, `quality=82`) and emits `src`/`srcset`/`sizes`. Use `{{/* figure(path="photo.webp", alt="...", caption="...") */}}` for colocated assets, or pass `static=true` with a `static/`-relative path (e.g. `img/blog/x.webp`). Variants larger than the original are skipped (no upscaling). The portrait in `templates/index.html` is inlined the same way (builds `srcset` in the `extras` block so the preload `<link>` and `<img>` share it); `og:image`/`twitter:image` in `partials/head.html` still point at the original static file. Generated files land in `static/processed_images/` (gitignored build output — see `.gitignore`).
 
 ## Content
 

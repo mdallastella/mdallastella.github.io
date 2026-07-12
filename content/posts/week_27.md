@@ -64,8 +64,4 @@ swings from "I can do it" to "I'm a fraud". I'm lucky to have my
 partner's support, encouraging me to go out and try not to think too
 much about work. Also, my two dogs cheer me up when I am in a bad mood.
 
-<figure width="auto" alt="Babù and Penny, my two maltese dogs."
-loading="lazy">
-<img src="/img/blog/babu_and_penny.webp" />
-<figcaption>Babù and Penny, my two maltese dogs.</figcaption>
-</figure>
+{{ figure(path="img/blog/babu_and_penny.webp", static=true, alt="Babù and Penny, my two maltese dogs.", caption="Babù and Penny, my two maltese dogs.") }}

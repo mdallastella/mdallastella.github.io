@@ -2,7 +2,36 @@
 {% import "macros/post_link.html" as macros %}
 
 {% block extras %}
-<link rel="preload" as="image" href="{{ get_url(path='img/portrait.webp') }}" type="image/webp" fetchpriority="high">
+{# Responsive portrait: build srcset once here (head renders first), reuse in main. #}
+{% set portrait_sizes = "(max-width: 767px) 256px, 352px" %}
+{% set portrait_meta = get_image_metadata(path="img/portrait.webp") %}
+{% set p128 = resize_image(path="img/portrait.webp", width=128, op="fit", height=10000, format="webp", quality=82) %}
+{% set_global portrait_srcset = p128.url ~ " " ~ p128.width ~ "w" %}
+{% set_global portrait_src = p128.url %}
+{% if 192 <= portrait_meta.width %}
+  {% set p192 = resize_image(path="img/portrait.webp", width=192, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global portrait_srcset = portrait_srcset ~ ", " ~ p192.url ~ " " ~ p192.width ~ "w" %}
+  {% set_global portrait_src = p192.url %}
+{% endif %}
+{% if 256 <= portrait_meta.width %}
+  {% set p256 = resize_image(path="img/portrait.webp", width=256, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global portrait_srcset = portrait_srcset ~ ", " ~ p256.url ~ " " ~ p256.width ~ "w" %}
+  {% set_global portrait_src = p256.url %}
+{% endif %}
+{% if 352 <= portrait_meta.width %}
+  {% set p352 = resize_image(path="img/portrait.webp", width=352, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global portrait_srcset = portrait_srcset ~ ", " ~ p352.url ~ " " ~ p352.width ~ "w" %}
+  {% set_global portrait_src = p352.url %}
+{% endif %}
+{% if 512 <= portrait_meta.width %}
+  {% set p512 = resize_image(path="img/portrait.webp", width=512, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global portrait_srcset = portrait_srcset ~ ", " ~ p512.url ~ " " ~ p512.width ~ "w" %}
+{% endif %}
+{% if 704 <= portrait_meta.width %}
+  {% set p704 = resize_image(path="img/portrait.webp", width=704, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global portrait_srcset = portrait_srcset ~ ", " ~ p704.url ~ " " ~ p704.width ~ "w" %}
+{% endif %}
+<link rel="preload" as="image" href="{{ portrait_src | safe }}" imagesrcset="{{ portrait_srcset | safe }}" imagesizes="{{ portrait_sizes | safe }}" type="image/webp" fetchpriority="high">
 {% endblock extras %}
 
 {% block main %}
@@ -12,7 +41,7 @@
 
     <!-- Portrait -->
     <div class="profile-portrait">
-      <img class="portrait" src="{{ get_url(path='img/portrait.webp') }}" alt="Marco's portrait" decoding="async" />
+      <img class="portrait" src="{{ portrait_src | safe }}" srcset="{{ portrait_srcset | safe }}" sizes="(max-width: 767px) 256px, 352px" alt="Marco's portrait" decoding="async" fetchpriority="high" />
     </div>
 
     <!-- Content -->

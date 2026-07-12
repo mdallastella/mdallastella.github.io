@@ -1,0 +1,44 @@
+{# Responsive figure shortcode.
+   Usage (colocated):  {{ figure(path="photo.webp", alt="...", caption="...") }}
+   Usage (static):     {{ figure(path="img/blog/x.webp", static=true, alt="...", caption="...") }}
+   Generates webp variants at 320/480/640/960/1280 (only those <= the original),
+   never upscales (op="fit"), and emits src + srcset + sizes.
+#}
+{% set use_static = static | default(value=false) %}
+{% set sizes_val = sizes | default(value="(max-width: 768px) calc(100vw - 2rem), 700px") %}
+{% set caption_val = caption | default(value="") %}
+{% set img_path = path %}
+{% if not use_static %}{% set img_path = page.colocated_path ~ path %}{% endif %}
+
+{% set meta = get_image_metadata(path=img_path) %}
+{% set image_320 = resize_image(path=img_path, width=320, op="fit", height=10000, format="webp", quality=82) %}
+{% set_global srcset = "" %}
+{% set_global src_url = image_320.url %}
+{% set_global srcset = image_320.url ~ " " ~ image_320.width ~ "w" %}
+{% if 480 <= meta.width %}
+  {% set image_480 = resize_image(path=img_path, width=480, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global srcset = srcset ~ ", " ~ image_480.url ~ " " ~ image_480.width ~ "w" %}
+  {% set_global src_url = image_480.url %}
+{% endif %}
+{% if 640 <= meta.width %}
+  {% set image_640 = resize_image(path=img_path, width=640, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global srcset = srcset ~ ", " ~ image_640.url ~ " " ~ image_640.width ~ "w" %}
+  {% set_global src_url = image_640.url %}
+{% endif %}
+{% if 960 <= meta.width %}
+  {% set image_960 = resize_image(path=img_path, width=960, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global srcset = srcset ~ ", " ~ image_960.url ~ " " ~ image_960.width ~ "w" %}
+{% endif %}
+{% if 1280 <= meta.width %}
+  {% set image_1280 = resize_image(path=img_path, width=1280, op="fit", height=10000, format="webp", quality=82) %}
+  {% set_global srcset = srcset ~ ", " ~ image_1280.url ~ " " ~ image_1280.width ~ "w" %}
+{% endif %}
+
+{% if caption_val %}
+<figure>
+  <img src="{{ src_url | safe }}" srcset="{{ srcset | safe }}" sizes="{{ sizes_val | safe }}" alt="{{ alt }}" loading="lazy" decoding="async">
+  <figcaption>{{ caption_val }}</figcaption>
+</figure>
+{% else %}
+<img src="{{ src_url | safe }}" srcset="{{ srcset | safe }}" sizes="{{ sizes_val | safe }}" alt="{{ alt }}" loading="lazy" decoding="async">
+{% endif %}

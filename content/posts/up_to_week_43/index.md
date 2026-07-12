@@ -29,11 +29,7 @@ sculptures are made with the wood of the fallen trees caused by the
 There are a few of these sculptures. You can see them
 [here](https://www.artsharing.org/artisti/marco-martalar).
 
-<figure width="auto"
-alt="Wood sculpture of a winged lion in the countryside" loading="lazy">
-<img src="./martalar_lion.webp" />
-<figcaption>Martalar's Lion</figcaption>
-</figure>
+{{ figure(path="martalar_lion.webp", alt="Wood sculpture of a winged lion in the countryside", caption="Martalar's Lion") }}
 
 After a short hike, we had lunch together at
 [Andreetta](https://www.andreetta.it/) restaurant: fine wines and
@@ -53,11 +49,7 @@ we woke up with 30cm of brown water inside the house. By the end of that
 morning the water rose to about 1m, so we fled and got hospitality from
 family members and friends. We moved back in our home a year after.
 
-<figure width="auto" alt="A picture of the 2010 flood in Vicenza"
-loading="lazy">
-<img src="./2010_flood.webp" />
-<figcaption>2010 flood</figcaption>
-</figure>
+{{ figure(path="2010_flood.webp", alt="A picture of the 2010 flood in Vicenza", caption="2010 flood") }}
 
 So no, I don't really like Halloween, and for years after I couldn't
 enjoy the sound of the rain.
@@ -69,13 +61,7 @@ my music genre). I was tense at the beginning, but after a couple of
 [Americano](https://en.wikipedia.org/wiki/Americano_(cocktail)) I
 started to enjoy the evening.
 
-<figure width="auto"
-alt="A collage of photos of me, a friend and my girlfriend dressed for Halloween"
-loading="lazy">
-<img src="./2025_halloween.webp" />
-<figcaption>Me and my friend Carmine on the left, my gf on the
-right</figcaption>
-</figure>
+{{ figure(path="2025_halloween.webp", alt="A collage of photos of me, a friend and my girlfriend dressed for Halloween", caption="Me and my friend Carmine on the left, my gf on the right") }}
 
 ## Code
 
