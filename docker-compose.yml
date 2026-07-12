@@ -1,0 +1,18 @@
+services:
+  mds-site:
+    image: ghcr.io/mdallastella/mds-site:latest
+    container_name: mds-site
+    restart: always
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mds-site.entrypoints=websecure"
+      - "traefik.http.routers.mds-site.rule=Host(`marco.dallastella.name`)"
+      - "traefik.http.routers.mds-site.service=mds-site"
+      - "traefik.http.services.mds-site.loadbalancer.server.port=80"
+      - "com.centurylinklabs.watchtower.enable=false"
+
+networks:
+  proxy:
+    external: true

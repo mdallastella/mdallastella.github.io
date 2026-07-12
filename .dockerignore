@@ -1,0 +1,6 @@
+.git
+.github
+docs/
+public/
+target/
+node_modules/
