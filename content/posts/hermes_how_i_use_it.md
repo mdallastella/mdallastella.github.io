@@ -6,7 +6,7 @@ date = 2026-07-18
 tags = ["productivity"]
 
 [extra]
-song = "7empest ⋅ Tool"
+song = "The Robots ⋅ Kraftwerk"
 +++
 
 ## What Is Hermes?
