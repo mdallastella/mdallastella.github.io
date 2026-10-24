@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal [Zola](https://www.getzola.org/) blog for Marco Dalla Stella, packaged as an `nginx-unprivileged` Docker image (port 8080), pushed to GHCR and deployed via a Portainer webhook. No Node toolchain.
+Personal [Zola](https://www.getzola.org/) blog for Marco Dalla Stella, packaged as an `nginx-unprivileged` Docker image (port 8080), pushed to GHCR and deployed with Arcane (redeploy is currently manual). No Node toolchain.
 
 ## Build & serve
 

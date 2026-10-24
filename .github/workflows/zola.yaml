@@ -1,4 +1,4 @@
-# Build the Zola site, scan it with Trivy, push a Docker image to GHCR, and trigger Portainer to deploy
+# Build the Zola site, scan it with Trivy, push a Docker image to GHCR
 name: Deploy website
 
 on:
@@ -76,15 +76,10 @@ jobs:
           skip-setup-trivy: true
 
       - name: Push
-        uses: docker/build-push-action@v7
-        with:
-          context: .
-          platforms: linux/amd64
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
-      - name: Trigger Portainer webhook
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: curl -fsSL -X POST "${{ secrets.PORTAINER_WEBHOOK_URL }}"
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          for tag in $TAGS; do
+            docker tag mds-site:scan "$tag"
+            docker push "$tag"
+          done
