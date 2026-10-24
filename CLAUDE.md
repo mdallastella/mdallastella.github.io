@@ -2,13 +2,14 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Personal [Zola](https://www.getzola.org/) blog for Marco Dalla Stella, deployed to GitHub Pages. No Node toolchain.
+Personal [Zola](https://www.getzola.org/) blog for Marco Dalla Stella, packaged as an `nginx-unprivileged` Docker image (port 8080), pushed to GHCR and deployed via a Portainer webhook. No Node toolchain.
 
 ## Build & serve
 
 - Local preview: `zola serve` (add `--drafts` to include `draft = true` pages).
 - Production build: `zola build` → outputs to `public/` (gitignored).
 - CI pins **Zola 0.22.1** (`.github/workflows/zola.yaml`, `ZOLA_VERSION`).
+- CI runs **Trivy** twice: a repo scan (vuln/misconfig/secrets) before the build, and an image scan on the locally built `mds-site:scan` before pushing. Any fixable CRITICAL/HIGH finding fails the job, so nothing is pushed or deployed. Accept known findings in a root `.trivyignore`. Preview locally with `trivy fs --scanners vuln,misconfig,secret --severity CRITICAL,HIGH --ignore-unfixed .`.
 
 ## Styling (two-part SCSS — important)
 

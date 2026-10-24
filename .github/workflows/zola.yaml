@@ -1,4 +1,4 @@
-# Build the Zola site, push a Docker image to GHCR, and trigger Portainer to deploy
+# Build the Zola site, scan it with Trivy, push a Docker image to GHCR, and trigger Portainer to deploy
 name: Deploy website
 
 on:
@@ -24,6 +24,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Trivy repo scan
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln,misconfig,secret
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: '1'
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
@@ -45,7 +55,27 @@ jobs:
             type=semver,pattern=v{{version}}
             type=semver,pattern=v{{major}}.{{minor}}
 
-      - name: Build and push
+      - name: Build
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64
+          load: true
+          tags: mds-site:scan
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Trivy image scan
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          image-ref: mds-site:scan
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          vuln-type: os,library
+          exit-code: '1'
+          skip-setup-trivy: true
+
+      - name: Push
         uses: docker/build-push-action@v7
         with:
           context: .

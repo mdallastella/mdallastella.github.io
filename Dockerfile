@@ -10,12 +10,18 @@ WORKDIR /app
 COPY . .
 RUN zola build
 
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged:alpine
+
+# Base image runs as non-root; switch back temporarily to pull in OS security fixes
+USER root
+RUN apk upgrade --no-cache
 
 COPY --from=build /app/public /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+USER nginx
+
+EXPOSE 8080
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget --spider -q http://127.0.0.1/ || exit 1
+    CMD wget --spider -q http://127.0.0.1:8080/ || exit 1
